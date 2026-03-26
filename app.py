@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+import os
 from utils.ai_service import analyze_account
 from utils.parser import extract_json, normalize_data
 from components import charts
@@ -15,8 +16,19 @@ st.set_page_config(
     layout='centered'
 )
 
-# Titulo
-st.title("Luz Clara")
+col1, col2 = st.columns([1, 4])
+
+with col1:
+    image_route = os.path.join("img", "img_title.png")
+    try:
+        soon = Image.open(image_route)
+        st.image(soon, use_container_width=True) 
+    except FileNotFoundError:
+        st.error("Imagem não encontrada. Verifique a pasta img.")
+
+with col2:
+    st.title("Luz Clara")
+
 st.subheader("Entenda sua conta de luz de forma simples")
 st.markdown("""
 ### Como funciona?
