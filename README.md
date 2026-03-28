@@ -213,6 +213,11 @@ streamlit run app.py
 ## 👨‍💻 Autor
 
 Desenvolvido por **Vitor Carvalho**
+---
+
+## Imagem
+
+<img width="845" height="865" alt="image" src="https://github.com/user-attachments/assets/d32dbca1-eb09-4dbe-b229-3cde02572207" />
 
 ---
 
